@@ -24,24 +24,26 @@
                 alert("Please enter a valid number for electricity consumption.");
         }
             else if (kWh <= 100) {
-                alert("The consumer is classified as: " + cat1);
+                alert("Discounted Electricity Rates, the consumer is classified as: " + cat1);
         }
 
             else if (kWh > 100 && kWh <= 200) {
-                alert("The consumer is classified as: " + cat2);
+                alert("Normal Residential Rate, the consumer is classified as: " + cat2);
         }
             else if (kWh > 200 && kWh <= 500) {
-                alert("The consumer is classified as: " + cat3);
+                alert("Typical electricity usage, the consumer is classified as: " + cat3);
         }
-            else if (kWh > 500) {
-                alert("The consumer is classified as: " + cat4);
+            else if (kWh > 500 && kWh <= 1000) {
+                alert("Higher electricity usage, the consumer is classified as: " + cat4);
         }
-            else {
-                alert("The consumer is classified as: " + cat5);
+            else if (kWh > 1000) {
+                alert("Heavy electricity usage, the consumer is classified as: " + cat5);
         }
 
-    }
-        
+            else {
+                alert("Invalid input. Please enter a valid number for electricity consumption.");
+            }
+        } 
 
     </script>
     
