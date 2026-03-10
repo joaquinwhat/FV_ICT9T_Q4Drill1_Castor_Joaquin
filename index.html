@@ -14,26 +14,37 @@
 
     <script>
         function classifyConsumption() {
-            const consumptionInput = document.getElementById('consumption');
-            const consumption = parseFloat(consumptionInput.value);
-
-            if (isNaN(consumption) || consumption < 0) {
-                alert('Please enter a valid non-negative number for electricity consumption.');
-                return;
-            }
-
-            let classification;
-
-            if (consumption < 100) {
-                classification = 'Low';
-            } else if (consumption >= 100 && consumption < 500) {
-                classification = 'Medium';
-            } else {
-                classification = 'High';
-            }
-
-            alert(`The electricity consumption of ${consumption} kWh is classified as: ${classification}`);
+            var kWh = document.getElementById("consumption").value;
+            let cat1 = "Lifeline Consumer";
+            let cat2 = "Low Consumption Consumer";
+            let cat3 = "Average Consumer";
+            let cat4 = "High Consumption Consumer";
+            let cat5 = "Very High Consumption Consumer";
+             if (isNaN(kWh) || kWh < 0) {
+                alert("Please enter a valid number for electricity consumption.");
         }
+            else if (kWh <= 100) {
+                alert("The consumer is classified as: " + cat1);
+        }
+
+            else if (kWh > 100 && kWh <= 200) {
+                alert("The consumer is classified as: " + cat2);
+        }
+            else if (kWh > 200 && kWh <= 500) {
+                alert("The consumer is classified as: " + cat3);
+        }
+
+            else if (kWh > 500 && kWh <= 1000) {
+                alert("The consumer is classified as: " + cat4);
+        }
+
+            else {
+                alert("The consumer is classified as: " + cat5);
+        }
+
+        
+
+    }
     </script>
     
 </body>
